@@ -1,5 +1,5 @@
 # Postman Learning
-Learning Postman and exploring ElasticSearch with Postman.
+Learning API using Postman and exploring ElasticSearch with Postman.
 
 ## Installing Postman on Windows
 1. Open the https://www.postman.com/ website.
@@ -8,4 +8,6 @@ Learning Postman and exploring ElasticSearch with Postman.
 4. Now installing process will start it takes a minute to install in the system.
 5. After installing the program the software opens automatically. Now you can see the interface of the software.
 
-![postman]()
+![postman](https://github.com/esraeryilmaz/postman-learning/blob/main/img/postman.PNG)
+
+
