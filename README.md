@@ -11,3 +11,31 @@ Learning API using Postman and exploring ElasticSearch with Postman.
 ![postman](https://github.com/esraeryilmaz/postman-learning/blob/main/img/postman.PNG)
 
 
+## What is Postman ?
+Postman is an API development tool which helps to build, test and modify APIs. Almost any functionality that could be needed by any developer is encapsulated in this tool. It has the ability to make various types of HTTP requests(GET, POST, PUT, PATCH), saving environments for later use, converting the API to code for various languages(like JavaScript, Python).
+Using postman you can make http request in any languages and you can still use elasticsearch. 
+
+### What is API ?
+Application programming interfaces (APIs) make software development and innovation easier by allowing programs to communicate data and functions safely and quickly.
+
+
+### Sending Request
+Postman enables you to create and send API requests. You don't need to enter commands in a terminal or write any code. Create a new request and select Send, and the API response appears right inside Postman.
+
+**Here are some of the most common methods:**
+- `GET` retrieves data from an API.
+- `POST` sends new data to an API.
+- `PATCH` and PUT update existing data.
+- `DELETE` removes existing data.
+
+### Elasticsearch request examples with Postman : 
+
+#### `GET`
+
+
+#### `POST`
+
+
+#### `DELETE`
+
+
