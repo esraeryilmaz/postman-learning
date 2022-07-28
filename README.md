@@ -30,12 +30,18 @@ Postman enables you to create and send API requests. You don't need to enter com
 
 ### Elasticsearch request examples with Postman : 
 
-#### `GET`
+#### `PUT`
+![put](https://github.com/esraeryilmaz/postman-learning/blob/main/img/put.PNG)
 
+#### `GET`
+![get](https://github.com/esraeryilmaz/postman-learning/blob/main/img/get.PNG)
 
 #### `POST`
-
+![post](https://github.com/esraeryilmaz/postman-learning/blob/main/img/post.PNG)
+New data : 
+![updated](https://github.com/esraeryilmaz/postman-learning/blob/main/img/updated.PNG)
 
 #### `DELETE`
+![delete](https://github.com/esraeryilmaz/postman-learning/blob/main/img/delete.PNG)
 
 
