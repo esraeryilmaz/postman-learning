@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "e8d4d036-517c-4533-8118-eb6d0603136a",
+		"name": "elasticsearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21810844"
+	},
+	"item": [
+		{
+			"name": "postman-echo.com/get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "postman-echo.com/get",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9200/posts",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZXNyYWVyeWlsbWF6OnBvc3QxMjM=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mappings\": {\r\n        \"post\":{\r\n            \"properties\": {\r\n                \"city\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"contact_email\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"country\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"description\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"image\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"post_id\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"state_province\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"title\": {\r\n                    \"type\": \"text\"\r\n                },\r\n                \"user_id\": {\r\n                    \"type\": \"text\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/index_name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"index_name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9200/get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mappings\": {\r\n        \"properties\": {\r\n            \"first-name\": {\r\n                \"type\": \"keyword\"\r\n            },\r\n            \"last-name\": {\r\n                \"type\": \"keyword\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/index1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"index1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/index1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"index1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9200/index1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"index1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "content-length",
+							"value": "261"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"index1\": {\n        \"aliases\": {},\n        \"mappings\": {\n            \"properties\": {\n                \"first-name\": {\n                    \"type\": \"keyword\"\n                },\n                \"last-name\": {\n                    \"type\": \"keyword\"\n                }\n            }\n        },\n        \"settings\": {\n            \"index\": {\n                \"routing\": {\n                    \"allocation\": {\n                        \"include\": {\n                            \"_tier_preference\": \"data_content\"\n                        }\n                    }\n                },\n                \"number_of_shards\": \"1\",\n                \"provided_name\": \"index1\",\n                \"creation_date\": \"1658236441204\",\n                \"number_of_replicas\": \"1\",\n                \"uuid\": \"wmo8y4hDQF2wvId-w_YKEA\",\n                \"version\": {\n                    \"created\": \"7120099\"\n                }\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "post data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first-name\":\"esra\",\r\n    \"last-name\":\"eryılmaz\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/index1/_doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"index1",
+						"_doc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update(post) data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first-name\":\"esra\",\r\n    \"last-name\":\"eryılmaz\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9200/index1/_doc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"index1",
+								"_doc"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Location",
+							"value": "/index1/_doc/XGrOJYIBicsdIe3AvgK2"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "content-length",
+							"value": "162"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_index\": \"index1\",\n    \"_type\": \"_doc\",\n    \"_id\": \"XGrOJYIBicsdIe3AvgK2\",\n    \"_version\": 1,\n    \"result\": \"created\",\n    \"_shards\": {\n        \"total\": 2,\n        \"successful\": 1,\n        \"failed\": 0\n    },\n    \"_seq_no\": 1,\n    \"_primary_term\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "get updated data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/index1/_doc/PyacFoIBmeTjemR4ROcA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"index1",
+						"_doc",
+						"PyacFoIBmeTjemR4ROcA"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get updated data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9200/index1/_doc/PyacFoIBmeTjemR4ROcA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"index1",
+								"_doc",
+								"PyacFoIBmeTjemR4ROcA"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "content-length",
+							"value": "175"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_index\": \"index1\",\n    \"_type\": \"_doc\",\n    \"_id\": \"PyacFoIBmeTjemR4ROcA\",\n    \"_version\": 1,\n    \"_seq_no\": 0,\n    \"_primary_term\": 1,\n    \"found\": true,\n    \"_source\": {\n        \"first-name\": \"esra\",\n        \"last-name\": \"eryılmaz\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/index1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"index1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:9200/",
+			"type": "string"
+		}
+	]
+}
